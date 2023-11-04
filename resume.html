@@ -106,13 +106,13 @@
                                 <p></p>
                                 <div style="font-weight: bold;">Summary</div>
                                 <hr style="background-color: black; margin-top: 5px;">
-                                    <p style="margin-top: -20px;">&#8226; I'm interested in finding an internship opportunity to gain hands-on experience related to the development of embedded systems and IoT.</p>
+                                    <p style="margin-top: -20px;">&#8226; I'm interested in finding an opportunity to gain hands-on experience related to the development of embedded systems and IoT.</p>
                                 <div style="font-weight: bold; margin-top: -20px;">EDUCATION</div>
                                     <hr style="background-color: black;  margin-top: 5px;">
                                         <p style="font-weight: bold;  margin-top: -20px;">&#8226; Embedded System and IoT (2020-2024)</p>
                                         <div style="margin-top: -50px;">
                                         <br>Ho Chi Minh City University of Technology and Education
-                                        <br>GPA: 8.63
+                                        <br>GPA: 8.64
                                         </div>
 
                                 <div style="font-weight: bold; margin-top: 10px;">SKILLS</div>
@@ -123,16 +123,16 @@
                                     </p>
 									<p style="margin-top: -30px;">
                                         <span style="font-weight: bold;"> &#8226; Embedded circuit board design: </span> 
-                                        <span>I can design 1,2 or 4-layer circuit boards on Altium </span>
+                                        <span>Design 1,2 or 4-layer circuit boards on Altium </span>
                                     </p>
                                     <p style="margin-top: -30px;">
                                         <span style="font-weight: bold;"> &#8226; Microcontroller: </span> 
-                                        <span>Esp32/Esp8266, Arduino, Stm32 </span>
+                                        <span>Esp32/Esp8266, Bw16 (AT commands), Stm32, nRF52840</span>
                                     </p>
                                     									
                                     <p style="margin-top: -30px;">
                                         <span style="font-weight: bold;"> &#8226; Protocols: </span> 
-                                        <span>UART, SPI, CANBUS, Wifi..</span>
+                                        <span>UART, SPI, CANBUS, Wifi, Modbus, Bluetooth, Mqtt, Lan...</span>
                                     </p>
                                     <p style="margin-top: -30px;">
                                         <span style="font-weight: bold;"> &#8226; Peripherals: </span> 
@@ -158,36 +158,37 @@
                                         </div>
 
                                         <div style="margin-top: -40px;">
-                                            <br>Smart Look, Sensor, Light, Control and display via smartphone app
+                                            <br>Hardware: Smart Look, Sensor, Light,..
+											<br>Sorfware: Application, Web DashBoard: control and receive hardware and 3D space via Firebase
+											<br>3D space: Unity: Simulating a House in Virtual Space.
+											<br>Server: Firebase
                                         </div>
-                                        <div style="display: flex; justify-content: space-between; ">
-                                            <span style="font-weight: bold;">&#8226; SmartHome application</span>
-                                            <a href="https://github.com/s2nmt/App-SmartHome-Java">Github</a>
-                                        </div>
-										<div style="margin-top: -40px;">
-                                            <br>Control electrical devices, display sensor values, and visualize data.
-                                        </div>
-                                        <div style="display: flex; justify-content: space-between; ">
-                                            <span style="font-weight: bold;">&#8226; SmartHome web design</span>
-                                            <a href="https://web-iot-3dba8.web.app/">Demo</a>
-                                        </div>
-										<div style="margin-top: -40px;">
-                                            <br>Display the webcam from ESP32-CAM,control electrical devices, display sensor values...
-                                        </div>
-                                        <div style="display: flex; justify-content: space-between;">
-                                            <span style="font-weight: bold;">&#8226; 3D house in a virtual space</span>
-                                            <a href="https://youtu.be/sN73oiuL8rA">Demo</a>
-                                        </div>
-										<div style="margin-top: -40px;">
-                                            <br>Interact with doors, electrical devices, and control them through Firebase.
-                                        </div>
+                
 										<div style="display: flex; justify-content: space-between;">
                                             <span style="font-weight: bold;">&#8226; The details of all my projects can be found on my website</span>
                                             <a href="https://s2nmt.github.io/MinhTuan/index.html" style="margin-right: 0.2cm;">Link</a>
                                         </div>
                                     <div style="font-weight: bold;">EXPERIENCE</div>
                                     <hr style="background-color: black;  margin-top: 5px;">
-                                    <div style="display: flex; justify-content: space-between; margin-top: -20px;">
+									<div style="display: flex; justify-content: space-between; margin-top: -20px;">
+                                        <span style="font-weight: bold;">&#8226; Firmware Engineer Internship</span>
+                                        <span style="font-weight: bold;">&#8226; From July 2023 - Present</span>
+                                    </div>
+                                    <div style="margin-top: -30px;">
+                                        <br>Project: Enhanced Athlete Performance Monitoring with BLE Technology (postion: Firmware)
+										<br style="text-indent: 20px;">Utilizing GPS sensors, accelerometer sensors, and Mcu Nrf52840. Utilizing a Kalman filter to filter data from a sensor,
+										 to compute parameters such as step count, velocity, acceleration, and position on a map. Processing communication and transmitting data via a mobile phone.
+										 Reading ADC to monitor pin status, reading GPIO to check if the device is charging, and utilizing a watchdog timer to prevent system hang.
+										<br>
+										<br >Project: Control Led via MQTT (postion: Firmware)
+										<br>For the Master Board (comprising 2 MCUs, BW16 and STM32G0), 
+										the AT command set of BW16 is used to establish an MQTT connection and then transmit UART data to STM32. 
+										The Master Board is responsible for controlling 20 LEDs on the master board. If data is sent down to control 
+										LEDs on the Slave Board, the Master Board's task is to transmit Modbus to the corresponding slave for control. 
+										<br>The Slave Board (1 MCU: STM32G0) is responsible for receiving data from the master, calculating checksum, and responding to ensure data accuracy.
+										If the data is correct, it controls the corresponding LEDs. If incorrect, it sends feedback to the master, prompting the master to resend the data
+									<div style="display: flex; justify-content: space-between;">
+
                                         <span style="font-weight: bold;">&#8226; Probability and Statistics teaching assistant</span>
                                         <span style="font-weight: bold;">&#8226; From February 2022 to June 2023</span>
                                     </div>
@@ -203,10 +204,6 @@
                                     <div style="text-align: right;">
                                         <a href="./assets/cv_NguyenMinhTuan.pdf" download style="font-weight: bold;">Tải xuống file PDF</a>
                                     </div>
-                                    
-                                    
-
-
 							</article>
 					</div>
 
