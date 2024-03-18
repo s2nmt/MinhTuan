@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Nguyen Minh Tuan</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Home</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="https://web-iot-3dba8.web.app/index_main.html">DashBoard</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="https://web-iot-3dba8.web.app/">Advertisement</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="resume.html">Resume</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3>Home</h3>
+											<p></p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>DashBoard</h3>
+											<p></p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Blog</h3>
+											<p></p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Advertisement</h3>
+											<p></p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>About</h3>
+											<p></p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions stacked">
+									<li><a href="#" class="button large fit">Log In</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">W5500</a></h2>
+										<p></p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2013-11-01">March 18, 2024</time>
+										<a href="#" class="author"><span class="name">Minh Tuan</span><img src="/images/avatar.jpg" alt="" /></a>
+									</div>
+								</header>
+								<span class="image featured"><img src="images/moduleLAN.png" alt="" /></span>
+								<div class="line"></div>
+								<strong>
+									Cách kết nối chân:
+								</strong>
+								<span class="image featured"><img src="images/ketnoichan.png" style="width: 30%;" alt="" /></span>
+								<strong>
+									Hàm Ping:
+								</strong>
+								<br/>
+								<strong>
+									File .h:
+								</strong>
+								<span class="image featured"><img src="images/pingLan.png" alt="" /></span>
+								<strong>
+									Khai báo biến:
+								</strong>
+								<span class="image featured"><img src="images/khaibaobien.png" alt="" style="object-fit: cover;" /></span>
+								<strong>
+									Hàm ping auto dùng với tham số là socket và ip address. socket được truyền vào là socket 0. Lưu ý địa chỉ IP addr có thể bị thay đổi nếu thiết bị không thể ping tới IP Address thì sẽ bị thay đổi tới cổng Gateway
+								</strong>
+								<span class="image featured"><img src="images/ping_autov1.png" alt="" style="object-fit: cover;" /></span>
+								<span class="image featured"><img src="images/pingautov2.png" alt="" style="object-fit: cover;" /></span>	
+								<strong>
+									Hàm ping count sử dụng để đếm các số lần ping thành công, chưa xài nên chưa biết 2 hàm độc lập.
+								</strong>
+								<span class="image featured"><img src="images/ping_w5500count.png" alt="" style="object-fit: cover;" /></span>
+								<span class="image featured"><img src="images/ping_count_w5500v2.png" alt="" style="object-fit: cover;" /></span>
+								<strong>
+									Chi tiết mã: <a href="https://github.com/s2nmt/pingLanW5500/tree/main/ping_w5500" target="_blank">https://github.com/s2nmt/pingLanW5500/tree/main/ping_w5500</a>
+								</strong>
+								<br/>
+								<div class="line"></div>
+
+								<strong>
+									Hàm kết nối MQTT. Sau đây chỉ hướng dẫn hàm ứng dụng còn chi tiết thư viện tham khảo thư viện của W5500
+								</strong>
+								<span class="image featured"><img src="images/khaibaodiachi.png" alt="" style="object-fit: cover;" /></span>
+								<div> Khai báo các thông tin như địa chỉ MAC: lưu ý địa chỉ MAC giữa các thiết bị phải khác nhau. Nếu địa chỉ Mac giống nhau server sẽ hiểu là cùng một thiết bị thì sẽ cấp cùng 1 IP dẫn đến trường hợp IP bị conflict</div>
+								<div>DHCP = NETINFO_DHCP đây là cấp ip động cho thiết bị. Đổi thành Static thì là ip tĩnh</div>
+								<div>Network n và Client c: Khởi tạo hai biến toàn cục một là cho network để truy cập socket, client dùng để kết nối mqtt. Socket được kết nối là socket 1</div>
+								<span class="image featured"><img src="images/khaibaoclientmqtt.png" alt="" style="object-fit: cover;" /></span>
+								<div>Các thông số khai báo cho mqtt</div>
+								<div>
+									<div>opts.nodelimiter = 0;:</div>
+									nodelimiter là một cờ để xác định xem có sử dụng dấu phân tách (delimiter) hay không khi nhận các gói tin từ broker MQTT.
+									Khi nodelimiter được đặt thành 0, điều này có nghĩa là thư viện MQTT sẽ sử dụng dấu phân tách để phân tách các gói tin.
+									Nếu nodelimiter được đặt thành 1, điều này có nghĩa là không sử dụng dấu phân tách và toàn bộ gói tin được coi là một chuỗi liên tục.
+									<div>opts.delimiter = (char*)"\n";:</div>
+									delimiter là dấu phân tách được sử dụng khi nodelimiter được đặt thành 0.
+									Trong trường hợp này, dấu phân tách được đặt thành dấu xuống dòng ("\n").
+									Dấu phân tách này được sử dụng để phân tách các gói tin MQTT khi chúng được nhận từ broker MQTT.
+									<div>opts.showtopics = 0;:</div>
+									showtopics là một cờ để xác định xem liệu các topic của các gói tin MQTT cần được hiển thị (in ra) hay không.
+									Khi showtopics được đặt thành 0, thư viện MQTT sẽ không hiển thị (in ra) các topic của các gói tin.
+									Nếu showtopics được đặt thành 1, các topic của các gói tin MQTT sẽ được hiển thị (in ra) cùng với nội dung của chúng.</div>
+								<span class="image featured"><img src="images/messageArrivec.png" alt=""></span>
+								<div>Hàm messageArrive là hàm nhận tin từ server mqtt. Hàm này được subcribe khi hàm MQTTYield được thực hiện.</div>
+								<span class="image featured"><img src="images/connectCable.png" alt=""></span>
+								<div>Hàm connect cable để kiểm tra hiện tại có cắm dây cáp mạng không nếu có thì cấp DHCP trong hàm DHCP try.</div>
+								<span class="image featured"><img src="images/DHCPtryver1.png" alt=""></span>
+								<span class="image featured"><img src="images/dhcptryv2.png" alt=""></span>
+								<div>Thay đổi địa chỉ MAC theo ID bởi vì module này không có địa chỉ MAC cố định. Việc thay đổi địa chỉ MAC để tránh trường hợp IP conflict</div>
+								<div>Thay đổi thời gian timeout và set timeout lại. Trong phần w5500 thì có hàm retry cố định bằng 8 có nghĩa là dù không có mạng thì khi ta public vẫn báo thành công 8 lần mới báo thất bại. đồng thời khi bị lỗi mạng thì việc chặn port trong mạng LAN diễn ra một thời gian dài hơn.</div>
+								<div>Việc để biến time_out = 1500 để tăng thời gian server cấp IP cho thiết bị. Việc để giá trị này quá thấp có thể dẫn tới trường hợp Server chưa đủ thời gian cấp IP cho thiết bị thì thiết bị đã tự thoát ra ngoài.</div>
+								<div>Hàm PHYStatusCheck dùng để kiểm tra có cáp mạng hay không. nếu trong khoảng thời gian dài mà không có cap mạng thì thoát ra khỏi vòng lặp.</div>
+								<span class="image featured"><img src="images/connectnetwork.png" alt=""></span>
+								<div>Tạo một network mới và tiến hành connect với network</div>
+								<span class="image featured"><img src="images/connectnetworkv1.png" alt=""></span>
+								<div> Việc tạo biến static port để mỗi khi bị chặn port không kết nối được với socket thì thiết bị tự đổi port khác trong lần kết nối tiếp theo ngăn chặn trường hợp bị chặn port.</div>
+								<span class="image featured"><img src="images/connectmqtt.png" alt=""></span>
+								<div> Hàm khởi tạo các giá trị để connect mqtt</div>
+								<span class="image featured"><img src="images/mqttpublish.png" alt=""></span>
+								<span class="image featured"><img src="images/mqttsubcribe.png" alt=""></span>
+								<span class="image featured"><img src="images/mqttdisconnect.png" alt=""></span>
+								<div>Lưu ý đối với hàm disconnect mqtt thì phải disconnect với port nếu không khi kết nối lại sẽ bị chặn port.</div>
+								<span class="image featured"><img src="images/mqttyield.png" alt=""></span>
+								<div>Hàm mqttyield phải luôn hoạt động thì khi subcribe mới nhận được dữ liệu. Gợi ý có thể dùng timer không cần phải 1 luồng để xử lý.</div>
+								<strong>
+									Chi tiết thư viện ứng dụng: <a href="https://github.com/s2nmt/pingLanW5500/tree/main/LAN_W5500" target="_blank">https://github.com/s2nmt/pingLanW5500/tree/main/LAN_W5500</a>
+								</strong>
+								<strong>
+									<div>Code này hoạt động tạm ổn không bị treo tuy nhiên timer trong code không được khởi tạo. Nếu được thì tạo cho nó một timer (cái này tui chưa có làm ....)</div></strong>
+								<footer>
+									<ul class="stats">
+										<li><a href="#">General</a></li>
+										<li><a href="#" class="icon solid fa-heart">28</a></li>
+										<li><a href="#" class="icon solid fa-comment">128</a></li>
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Copyright © Minh Tuan 2023.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
